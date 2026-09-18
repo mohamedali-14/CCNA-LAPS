@@ -9,7 +9,7 @@ Configure Standard and Extended ACLs to control network traffic in three differe
 ## Topologies
 
 ### Scenario 1: Standard ACL (Basic)
-![Topology 1](topology1.png)
+![Topology 1](Topology1.png)
 
 **Description:**
 - Router `ACL` (2911) with Gig0/0 (192.168.1.1) and Gig0/1 (192.168.2.1)
@@ -18,7 +18,7 @@ Configure Standard and Extended ACLs to control network traffic in three differe
 - **Goal:** Block PC0 (192.168.1.2) from reaching the 192.168.2.0/24 network
 
 ### Scenario 2: Standard ACL with Static Routing
-![Topology 2](topology2.png)
+![Topology 2](Topology2.png)
 
 **Description:**
 - Two routers connected via serial link (192.168.2.0/24)
@@ -28,7 +28,7 @@ Configure Standard and Extended ACLs to control network traffic in three differe
 - **Goal:** Block PC8 (192.168.1.2) from reaching the 192.168.3.0/24 network
 
 ### Scenario 3: Extended ACL
-![Topology 3](topology3.png)
+![Topology 3](Topology3.png)
 
 **Description:**
 - Router (2911) with Gig0/0 (192.168.1.1) and Gig0/1 (192.168.2.1)
@@ -169,7 +169,7 @@ ip access-group 100 in
 | File | Description |
 |------|-------------|
 | `ACL.pkt` | Packet Tracer file containing all three scenarios |
-| `topology1.png` | Scenario 1 topology screenshot |
-| `topology2.png` | Scenario 2 topology screenshot |
-| `topology3.png` | Scenario 3 topology screenshot |
+| `Topology1.png` | Scenario 1 topology screenshot |
+| `Topology2.png` | Scenario 2 topology screenshot |
+| `Topology3.png` | Scenario 3 topology screenshot |
 | `README.md` | This documentation |
