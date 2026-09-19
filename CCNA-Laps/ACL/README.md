@@ -63,18 +63,20 @@ Configure Standard and Extended ACLs to control network traffic in three differe
 - Applying ACL outbound on Gig0/1
 
 ### Configuration
+```
 access-list 1 deny host 192.168.1.2
 access-list 1 permit 192.168.1.0 0.0.0.255
 !
 interface Gig0/1
 ip access-group 1 out
-
+```
 
 ### Verification
+```
 - `show access-lists`
 - From PC0 (192.168.1.2): `ping 192.168.2.2` → **Fails** (blocked)
 - From PC1 (192.168.1.3): `ping 192.168.2.2` → **Succeeds** (allowed)
-
+```
 ---
 
 ## Scenario 2: Standard ACL with Static Routing — Configuration
@@ -99,11 +101,11 @@ ip access-group 1 out
 ### Configuration
 
 **Left Router:**
-
+```
 ip route 192.168.3.0 255.255.255.0 192.168.2.2
-
+```
 **Right Router:**
-
+```
 ip route 192.168.1.0 255.255.255.0 192.168.2.1
 !
 access-list 2 deny host 192.168.1.2
@@ -111,14 +113,15 @@ access-list 2 permit 192.168.1.0 0.0.0.255
 !
 interface Gig0/1
 ip access-group 2 out
-
+```
 
 ### Verification
+```
 - `show access-lists`
 - `show ip route` (confirm static routes)
 - From PC8 (192.168.1.2): `ping 192.168.3.2` → **Fails** (blocked)
 - From PC9 (192.168.1.3): `ping 192.168.3.2` → **Succeeds** (allowed)
-
+```
 ---
 
 ## Scenario 3: Extended ACL — Configuration
@@ -139,20 +142,21 @@ ip access-group 2 out
 - `permit ip any any` to allow all other traffic
 
 ### Configuration
-
+```
 access-list 100 deny tcp host 192.168.1.2 host 192.168.2.2 eq www
 access-list 100 permit ip any any
 !
 interface Gig0/0
 ip access-group 100 in
-
+```
 
 ### Verification
+```
 - `show access-lists`
 - From PC12 (192.168.1.2): Open web browser to `192.168.2.2` → **Blocked**
 - From PC12: `ping 192.168.2.2` → **Succeeds** (ICMP allowed)
 - From PC13 (192.168.2.2): `ping 192.168.1.2` → **Succeeds**
-
+```
 ---
 
 ## What I Learned

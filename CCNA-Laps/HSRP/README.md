@@ -51,22 +51,22 @@ Configure HSRP (Hot Standby Router Protocol) to provide gateway redundancy for a
 ## Configuration
 
 ### Router0 (Active Router — Left)
-
+```
 interface GigabitEthernet0/0
 ip address 192.168.1.1 255.255.255.0
 standby 5 ip 192.168.1.100
 standby 5 priority 200
 standby 5 preempt
 no shutdown
-
+```
 
 ### Router2 (Standby Router — Right)
-
+```
 interface GigabitEthernet0/0
 ip address 192.168.1.2 255.255.255.0
 standby 5 ip 192.168.1.100
 no shutdown
-
+```
 
 ### PC Configuration
 | PC | IP Address | Default Gateway |
@@ -80,10 +80,10 @@ no shutdown
 ## Verification
 
 ### Commands
-
+```
 show standby
 show standby brief
-
+```
 
 ### Expected Output
 | Router | State | Priority | Virtual IP |

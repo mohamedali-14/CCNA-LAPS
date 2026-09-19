@@ -77,7 +77,7 @@ Configure DHCP services in two different scenarios:
 | PC6, PC7, PC8 | 192.168.2.x (DHCP) | 255.255.255.0 |
 
 ### Router Configuration
-
+```
 ip dhcp excluded-address 192.168.1.1 192.168.1.30
 ip dhcp excluded-address 192.168.2.1 192.168.2.40
 !
@@ -98,7 +98,7 @@ no shutdown
 interface GigabitEthernet0/1
 ip address 192.168.2.1 255.255.255.0
 no shutdown
-
+```
 
 ### Key Concepts
 - Router as DHCP server for multiple subnets
