@@ -41,7 +41,7 @@ Configure and verify:
 ---
 
 ## Devices Used
-- **5 Routers** (Cisco 2911)
+- **6 Routers** (Cisco 2911)
 - **2 Switches** (Cisco 2960-24TT)
 - **1 Server** (Server-PT)
 
