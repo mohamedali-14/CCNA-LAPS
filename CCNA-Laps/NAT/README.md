@@ -32,7 +32,7 @@ Configure Network Address Translation (NAT) in two different scenarios:
 ## Devices Used
 - **4 Routers** (Cisco 2911)
 - **4 Switches** (Cisco 2960-24TT)
-- **5 PCs**
+- **6 PCs**
 
 ---
 
