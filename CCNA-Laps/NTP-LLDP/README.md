@@ -173,7 +173,7 @@ show clock
 | Service | NTP |
 | Authentication | Enable |
 | Key | 1 |
-| Password | 1426 |
+| Password | 1616 |
 
 ### Router6 Configuration
 ```
